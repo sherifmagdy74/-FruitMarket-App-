@@ -2,15 +2,9 @@
 
 An application developed to display fruit products, starting with choosing the product name, choosing the quantity, calculating the payment, and then delivery.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## 🎨 UI Design (Figma)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This app is based on a modern and clean UI design.  
+You can check out the full design here:  
+👉 [Click to view the Figma Design](https://www.figma.com/design/tajhR4rprejWaWvyE0102L/Fruits-app?node-id=1-1785)
