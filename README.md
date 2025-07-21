@@ -1,6 +1,6 @@
 # fruit_market
 
-A new Flutter project.
+An application developed to display fruit products, starting with choosing the product name, choosing the quantity, calculating the payment, and then delivery.
 
 ## Getting Started
 
