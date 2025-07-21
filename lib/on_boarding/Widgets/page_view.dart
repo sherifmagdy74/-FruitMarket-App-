@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+import 'package:fruit_market/on_boarding/Widgets/page_view_item.dart';
+
+class page_view_onboarding extends StatelessWidget {
+  const page_view_onboarding({super.key,@required this.pagecontroller});
+final PageController? pagecontroller;
+  @override
+  Widget build(BuildContext context) {
+    return PageView(
+       controller: pagecontroller,
+       children: [
+         PageViewItem(
+
+           title:'E Shopping' ,
+           image:'assets/dilivry.png' ,
+           subtitle: 'Order from the best local Fruit & grap with easy, on-demand delivery',
+         ),
+         PageViewItem(
+
+           title:'Delivery Arrived' ,
+           image:'assets/dilivry.png' ,
+           subtitle: 'Order from the best local Fruit & grap with easy, on-demand delivery',
+         ),PageViewItem(
+
+           title:'E Shopping' ,
+           image:'assets/dilivry.png' ,
+           subtitle: 'Order is arrived at your place',
+         ),
+       ],
+    );
+  }
+}

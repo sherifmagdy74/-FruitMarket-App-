@@ -1,0 +1,107 @@
+import 'package:flutter/material.dart';
+
+import '../../../../../core/Widgets/space_widget.dart';
+import '../../Model/productCardModel.dart';
+
+class ProductCard extends StatelessWidget {
+  const ProductCard({super.key, required this.product,});
+
+  final ProductCardModel product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.white,
+            boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5)],
+          ),
+          child:
+
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+            children: [
+
+            Material(
+            elevation: 3,
+            borderRadius: BorderRadius.circular(60),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(60),
+              child: Image.asset(
+                product.image,
+                height: 90,
+                width: 90,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+
+          Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Text(product.productName,
+              style: const TextStyle(fontWeight: FontWeight.bold)),
+          if (product.isSelectable)
+      const Text(
+        "Price Upon Selection",
+        style: TextStyle(
+          fontWeight: FontWeight.w500,
+          color: Colors.grey,
+        ),
+      )
+      else if (product.newPrice != null)
+      Row(
+      children: [
+      Text(
+      "${product.newPrice} KD",
+      style: const TextStyle(
+      color: Colors.green, fontWeight: FontWeight.bold),
+      ),
+      widthSpace(value: 0.5),
+      if (product.oldPrice != null)
+      Text(
+      "${product.oldPrice} KD",
+      style: const TextStyle(
+      decoration: TextDecoration.lineThrough,
+      color: Colors.grey,
+      ),
+      ),
+      ],
+      ),
+                product.discount != null
+                    ? Container(
+                  width: 100,
+                  height: 25,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.red[100],
+                  ),
+                  child: Text(
+                    product.discount!,
+                    style: const TextStyle(color: Colors.redAccent),
+                  ),
+                )
+                    : SizedBox.shrink(),
+
+
+              ],
+      ),
+              widthSpace(value: 0.5),
+
+              IconButton(onPressed: (){}, icon: Image.asset('assets/icons/productBasket.png'))
+
+
+      ])),
+    );
+    }
+}
+
+
